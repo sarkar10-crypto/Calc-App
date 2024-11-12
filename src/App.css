@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+* ::selection{
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+       font-family: fantasy;                         
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  /* text-align: center; ye use karne se button pura width le raha hai toh Display: flex use kar rahe hai  */
+  background: #B993D6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1{
+  font-size: 50px;
+  color: rgb(2, 71, 66);
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  
+  margin-top: 40px;
+  display: grid;
+  /* 1 row main 4 columns chahiye toh uske liye (Grid-template-column use karenge) */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 50vh;
+  height: 50vh;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell{
+  
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(166, 244, 218);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input{
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+  padding-left: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
